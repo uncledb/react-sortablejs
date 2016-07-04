@@ -1,0 +1,23 @@
+{
+  "name": "react-sortablejs",
+  "version": "0.0.0",
+  "description": "A React binding to SortableJS.",
+  "main": "react-sortable.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SortableJS/react-sortablejs.git"
+  },
+  "keywords": [
+    "react",
+    "sortable"
+  ],
+  "author": "RubaXa <trash@rubaxa.org>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SortableJS/react-sortablejs/issues"
+  },
+  "homepage": "https://github.com/SortableJS/react-sortablejs#readme"
+}
