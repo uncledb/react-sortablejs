@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/SortableJS/react-sortablejs/issues"
   },
-  "homepage": "https://github.com/SortableJS/react-sortablejs#readme"
+  "homepage": "https://github.com/SortableJS/react-sortablejs#readme",
+  "dependencies": {
+    "sortablejs": "^1.5.0-rc1"
+  }
 }
