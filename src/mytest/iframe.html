@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<script>
+		console.log(window.parent.test);
+		function doBack() {
+			window.parent.callBack([{id:1}]);
+		}
+	</script>
+</head>
+<body>
+<a href="#" onclick="doBack()">回传</a>
+</body>
+</html>
