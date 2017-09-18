@@ -4,18 +4,42 @@ import Sortable from 'sortablejs';
 
 class SortableList extends React.Component {
 
-	componentDidMount() {
-		var el = document.getElementById('items');
-		var sortable = Sortable.create(el);
+	constructor() {
+		super();
+		this.sortId = +new Date();
 	}
 
+	static defaultProps = {
+		options: {
+			onEnd: function (evt) {
+				console.log(evt.oldIndex, evt.newIndex);
+			}
+		},
+		sortListData: [1, 2, 3],
+	};
+
+	componentDidMount() {
+		this.createSortable();
+	}
+
+
+	componentDidUpdate() {
+		this.createSortable();
+	}
+
+	createSortable = () => {
+		let el = document.getElementById(this.sortId);
+		Sortable.create(el, this.props.options);
+	};
+
 	render() {
+		const {sortId} = this;
 		return (
-			<ul id="items">
-				<li>item 1</li>
-				<li>item 2</li>
-				<li>item 3</li>
-			</ul>
+			<div>
+				<div id={sortId}>
+					{this.props.children}
+				</div>
+			</div>
 		)
 	}
 }
